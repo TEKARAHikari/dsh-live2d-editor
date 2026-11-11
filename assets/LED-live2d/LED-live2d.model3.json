@@ -1,0 +1,10 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "LED-live2d.moc3",
+		"Textures": [
+			"LED-live2d.2048/texture_00.png"
+		],
+		"DisplayInfo": "LED-live2d.cdi3.json"
+	}
+}

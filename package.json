@@ -1,0 +1,46 @@
+{
+  "name": "dsh-live2d-editor",
+  "version": "0.1.0",
+  "description": "Live2D 编辑器：DSH Web 里的 moc3 实时参数/表情/动作编辑面板 / Live2D parameter, expression and motion editor inside the DSH Web GUI",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "NOTICE",
+    "preview"
+  ],
+  "scripts": {
+    "build": "node scripts/build-assets.mjs && node scripts/build-client.mjs",
+    "test": "node --test",
+    "test:browser": "node scripts/verify-browser.mjs && node scripts/verify-ui.mjs",
+    "pack:check": "node scripts/check-package.mjs",
+    "fetch:vendor": "node scripts/fetch-vendor.mjs"
+  },
+  "engines": {
+    "node": ">=22",
+    "dsh": ">=0.2.1-rc.5 <0.3.0-0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    },
+    "compatibility": {
+      "dsh": ">=0.2.1-rc.5 <0.3.0-0"
+    }
+  }
+}

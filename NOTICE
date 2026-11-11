@@ -1,0 +1,29 @@
+Live2D Cubism Core
+==================
+
+`assets/live2dcubismcore.min.js`（同时内联在 `lib/client.js` 里）是 Live2D Inc. 的
+Cubism Core，文件头自带声明：
+
+    /**
+     * Live2D Cubism Core
+     * (C) 2019 Live2D Inc. All rights reserved.
+     *
+     * This file is licensed pursuant to the license agreement below.
+     * This file corresponds to the "Redistributable Code" in the agreement.
+     * https://www.live2d.com/eula/live2d-proprietary-software-license-agreement_en.html
+     */
+
+它按 *Live2D Proprietary Software License Agreement* 中 “Redistributable Code” 的条款
+随本插件分发，版权归 Live2D Inc.，不属于本仓库的 MIT 授权范围。
+
+使用约束（摘录，完整条款以上面的链接为准）：
+
+- 只能在 Live2D 软件/服务的应用场景内使用该 Core 与本插件；
+- 不得用该 Core 开发与 Live2D 竞争的产品；
+- 不得反向工程、反编译或拆解该文件；
+- 分发时必须保留文件内的版权与许可声明。
+
+本仓库不修改该文件，只原样内联；构建脚本 `scripts/build-client.mjs` 读取
+`assets/live2dcubismcore.min.js` 的字节并作为字符串写入 bundle。
+
+模型素材（`assets/LED-live2d/*`）是本机自有素材，随插件一起分发用于本地预览。

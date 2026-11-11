@@ -1,0 +1,6 @@
+node_modules/
+build/
+dist/
+*.tgz
+*.zip
+.pnpm-debug.log

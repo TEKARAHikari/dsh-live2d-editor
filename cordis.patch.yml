@@ -1,0 +1,8 @@
+# dsh-live2d-editor bundle patch
+#
+# 宿主半边只是为了把这一行挂进 cordis 树：dsh-client-modules 依
+# package.json 的 `dsh.client` + `exports["./client"]` 把浏览器半边编进
+# window.__DSH_BOOT__。没有这行，lib/client.js 永远不会被加载。
+- insert:
+    - id: live2d-editor
+      name: dsh-live2d-editor
